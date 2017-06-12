@@ -7,6 +7,7 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/ghq.css">
 		<link rel="stylesheet" href="css/theme/black.css">
 
 		<!-- Theme used for syntax highlighting of code -->
@@ -25,14 +26,91 @@
 		<div class="reveal">
 			<div class="slides">
 
-					<section class="intro">
+					<!-- <section class="intro">
 						<h1><span class="color">Flexbox</span> do <strong>jeito certo</strong></h1>
 						<hr class="hr-theme">
 						<p>@gustavoquinalha</p>
 					</section>
 
 
-				<section>"O novo modo de layout <span class="color">flexbox</span> está pronto para redefinir como fazemos layouts com CSS."</section>
+				<section>
+					<p>O <span class="color">Flexbox</span>(Flexible Box Layout Model) faz parte da especificação do CSS3 que organiza elementos na página quando o layout precisa ser visualizado em diversos tamanhos.</p>
+				</section> -->
+
+
+				<section>
+					<h2 class="color">A ideia é simples</h2>
+					<p>Os filhos de um elemento com flexbox pode se posicionar em qualquer direção e pode ter dimensões flexíveis para se adaptar.</p>
+
+					<div class="example">
+						<div class="container">
+							<div class="item">Filho</div>
+							<div class="item">Filho</div>
+						</div>
+					</div>
+
+				</section>
+
+				<section>
+					<h2 class="color">Elementos e Vocabulário</h2>
+					<p>Você precisa entender que o Flexbox é uma nova maneira de posicionar elementos do seu layout e por isso precisamos de novos nomes para identificar os elementos da estrutura.</p>
+				</section>
+
+
+				<section>
+					<span class="color">Flex container</span> é o elemento que envolve sua estrutura. Você define que um elemento é um Flex Container com a propriedade display com os valores flex ou inline-flex.
+
+					<div class="example">
+						<div class="container">
+							<div class="item">item</div>
+						</div>
+					</div>
+
+				</section>
+
+				<section>
+					<span class="color">Flex Item</span> são os elementos filho do flex container.
+					<div class="example">
+						<div class="container">
+							<div class="item">item</div>
+							<div class="item">item</div>
+							<div class="item">item</div>
+							<div class="item">item</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- <section>
+					<span class="color">Eixos ou Axes</span> são as duas direções básicas que existem em um Flex Container: main axis, que seria o eixo horizontal ou o eixo principal e o cross axis que seria o eixo vertical.
+				</section> -->
+
+				<section>
+					<span class="color">Directions</span> determina a origem e o término do fluxo dos ítens. Eles seguem o vetor estabelecido pelo modo traidicional de escrita: esquerda para direita, direita para esquerda etc.
+
+					<div class="example">
+						<div class="container column">
+							<div class="item">item</div>
+							<div class="item">item</div>
+						</div>
+					</div>
+
+				</section>
+
+				<section>
+					A propriedade <span class="color">order</span> determina o lugar que os elementos aparecerão.
+				</section>
+
+				<section>
+					A propriedade <span class="color">flex-flow</span> determina a ordem do fluxo em que os elementos aparecerão.
+				</section>
+
+				<section>
+					Você pode definir se os elementos serão forçados a ficar em uma mesma linha ou se eles irão quebrar em várias linhas com a propriedade <span class="color">flex-wrap</span>.
+				</section>
+
+
+
+
 			</div>
 		</div>
 
