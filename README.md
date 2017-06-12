@@ -7,6 +7,10 @@
 - http://slides.com/escapedcat/css#/4
 - http://pt-br.learnlayout.com/flexbox.html
 -
+- https://speakerdeck.com/diogomoretti/css-layout-from-table-to-flexbox <- toppp
+- https://pt.slideshare.net/diegoeis/flexbox-to-the-people
+- https://speakerdeck.com/afonsopacifer/flexbox
+-
 -
 -
 - https://medium.freecodecamp.com/understanding-flexbox-everything-you-need-to-know-b4013d4dc9af

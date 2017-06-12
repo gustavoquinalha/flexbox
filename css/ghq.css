@@ -82,3 +82,12 @@
   background: #cdcdcd;
   padding: 20px!important;
 }
+
+.pai{
+  width: 100%;
+  background: #cdcdcd;
+  padding: 20px!important;
+  padding-bottom: 0!important;
+  text-align: left!important;
+  color: #00d46a
+}

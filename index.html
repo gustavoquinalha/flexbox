@@ -1,134 +1,200 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/ghq.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+  <title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/ghq.css">
+  <link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
 
-					<!-- <section class="intro">
-						<h1><span class="color">Flexbox</span> do <strong>jeito certo</strong></h1>
-						<hr class="hr-theme">
-						<p>@gustavoquinalha</p>
-					</section>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+	<!--
+https://speakerdeck.com/diogomoretti/css-layout-from-table-to-flexbox
+http://www.flexboxpatterns.com/home
+-->
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section class="intro">
+        <h1><span class="color">Flexbox</span> do <strong>jeito certo</strong></h1>
+        <hr class="hr-theme">
+        <p>@gustavoquinalha</p>
+      </section>
+
+			<section style="text-align: left!important">
+				<h2>Gustavo Quinalha</h2>
+				<small><strong>Full Stack Developer at Monk</strong></small><br />
+				<ul>
+					<li>Github</li>
+					<li>Codepen</li>
+					<li>Linkedin</li>
+					<li>Face</li>
+				</ul>
+			</section>
+
+      <section>
+				<h2 class="color">FLEXBOX</h2>
+        <img src="https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif" alt="" width="70%">
+
+      </section>
 
 
-				<section>
-					<p>O <span class="color">Flexbox</span>(Flexible Box Layout Model) faz parte da especificação do CSS3 que organiza elementos na página quando o layout precisa ser visualizado em diversos tamanhos.</p>
-				</section> -->
+      <section>
+        <p>O <span class="color">Flexbox</span>(Flexible Box Layout Model) faz parte da especificação do CSS3 que organiza elementos na página quando o layout precisa ser visualizado em diversos tamanhos.</p>
+        <img src="img/caniuse.png" alt="">
+      </section>
+
+      <section>
+        <h2 class="color">Flexbox - The box</h2>
+        <img src="./img/flex-axes.png" alt="" width="90%">
+        <p></p>
+
+      </section>
 
 
-				<section>
-					<h2 class="color">A ideia é simples</h2>
-					<p>Os filhos de um elemento com flexbox pode se posicionar em qualquer direção e pode ter dimensões flexíveis para se adaptar.</p>
 
-					<div class="example">
-						<div class="container">
-							<div class="item">Filho</div>
-							<div class="item">Filho</div>
-						</div>
-					</div>
+      <section>
+        <section>
+          <h2 class="color">Flexbox Properties</h2>
+          <p>Você precisa entender que o Flexbox é uma nova maneira de posicionar elementos do seu layout e por isso precisamos de novos nomes para identificar os elementos da estrutura.</p>
 
-				</section>
+        </section>
+        <section>
+          <div class="container justify-around">
+						<ul>
+	            <h5>Flex Container</h5>
+	            <li>Display</li>
+	            <li>flex-direction</li>
+	            <li>flex-wrap</li>
+	            <li>flex-flow</li>
+	            <li>justify-content</li>
+	            <li>align-items</li>
+	          </ul>
+	          <ul>
+	            <h5>Flex Item</h5>
+	            <li>order</li>
+	            <li>flex-grow</li>
+	            <li>flex-shrink</li>
+	            <li>align-self</li>
+	          </ul>
+          </div>
+        </section>
+      </section>
 
-				<section>
-					<h2 class="color">Elementos e Vocabulário</h2>
-					<p>Você precisa entender que o Flexbox é uma nova maneira de posicionar elementos do seu layout e por isso precisamos de novos nomes para identificar os elementos da estrutura.</p>
-				</section>
+
+			<section>
+        <h2 class="color">A ideia é simples</h2>
+        <p>Os filhos de um elemento com flexbox pode se posicionar em qualquer direção e pode ter dimensões flexíveis para se adaptar.</p>
+
+        <div class="example">
+          <div class="pai">Pai(container)</div>
+          <div class="container">
+            <div class="item">Filho(item)</div>
+          </div>
+        </div>
+
+      </section>
 
 
-				<section>
-					<span class="color">Flex container</span> é o elemento que envolve sua estrutura. Você define que um elemento é um Flex Container com a propriedade display com os valores flex ou inline-flex.
+      <section>
+        <span class="color">Flex container</span> é o elemento que envolve sua estrutura. Você define que um elemento é um Flex Container com a propriedade display com os valores flex ou inline-flex.
 
-					<div class="example">
-						<div class="container">
-							<div class="item">item</div>
-						</div>
-					</div>
+        <div class="example">
+          <div class="container">
+            <div class="item">item</div>
+          </div>
+        </div>
 
-				</section>
+      </section>
 
-				<section>
-					<span class="color">Flex Item</span> são os elementos filho do flex container.
-					<div class="example">
-						<div class="container">
-							<div class="item">item</div>
-							<div class="item">item</div>
-							<div class="item">item</div>
-							<div class="item">item</div>
-						</div>
-					</div>
-				</section>
+      <section>
+        <span class="color">Flex Item</span> são os elementos filho do flex container.
+        <div class="example">
+          <div class="container">
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+          </div>
+        </div>
+      </section>
 
-				<!-- <section>
+      <!-- <section>
 					<span class="color">Eixos ou Axes</span> são as duas direções básicas que existem em um Flex Container: main axis, que seria o eixo horizontal ou o eixo principal e o cross axis que seria o eixo vertical.
 				</section> -->
 
-				<section>
-					<span class="color">Directions</span> determina a origem e o término do fluxo dos ítens. Eles seguem o vetor estabelecido pelo modo traidicional de escrita: esquerda para direita, direita para esquerda etc.
+      <section>
+        <span class="color">Directions</span> determina a origem e o término do fluxo dos ítens. Eles seguem o vetor estabelecido pelo modo traidicional de escrita: esquerda para direita, direita para esquerda etc.
 
-					<div class="example">
-						<div class="container column">
-							<div class="item">item</div>
-							<div class="item">item</div>
-						</div>
-					</div>
+        <div class="example">
+          <div class="container column">
+            <div class="item">item</div>
+            <div class="item">item</div>
+          </div>
+        </div>
 
-				</section>
+      </section>
 
-				<section>
-					A propriedade <span class="color">order</span> determina o lugar que os elementos aparecerão.
-				</section>
+      <section>
+        A propriedade <span class="color">order</span> determina o lugar que os elementos aparecerão.
+      </section>
 
-				<section>
-					A propriedade <span class="color">flex-flow</span> determina a ordem do fluxo em que os elementos aparecerão.
-				</section>
+      <section>
+        A propriedade <span class="color">flex-flow</span> determina a ordem do fluxo em que os elementos aparecerão.
+      </section>
 
-				<section>
-					Você pode definir se os elementos serão forçados a ficar em uma mesma linha ou se eles irão quebrar em várias linhas com a propriedade <span class="color">flex-wrap</span>.
-				</section>
-
-
+      <section>
+        Você pode definir se os elementos serão forçados a ficar em uma mesma linha ou se eles irão quebrar em várias linhas com a propriedade <span class="color">flex-wrap</span>.
+      </section>
 
 
-			</div>
-		</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      dependencies: [{
+        src: 'plugin/markdown/marked.js'
+      }, {
+        src: 'plugin/markdown/markdown.js'
+      }, {
+        src: 'plugin/notes/notes.js',
+        async: true
+      }, {
+        src: 'plugin/highlight/highlight.js',
+        async: true,
+        callback: function() {
+          hljs.initHighlightingOnLoad();
+        }
+      }]
+    });
+  </script>
+</body>
+
 </html>
