@@ -86,12 +86,11 @@
 .item {
   background: #00d46a;
   padding: 10px!important;
-  margin-right: 5px!important;
-  margin-bottom: 2px!important
+  margin: 2px!important
 }
-.item:last-child {
+/*.item:last-child {
   margin-right: 0!important;
-}
+}*/
 
 
 .example .container {
@@ -123,4 +122,8 @@ code {
 
 .fixul li {
   font-size: 0.8em
+}
+
+.wrap-example {
+  flex-basis: 400px
 }

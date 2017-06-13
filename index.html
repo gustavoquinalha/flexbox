@@ -234,22 +234,68 @@ http://www.flexboxpatterns.com/home
 
         <section>
           <h2 class="color">Container properties</h2> A propriedade <span class="color">display</span> flex, ou inline-flex determina que o container é flex, sendo assim "ativando" as propriedas do flexbox.
+          <div class="example">
+            <div class="container center row">
+              <div class="item">item</div>
+            </div>
+          </div>
         </section>
 
         <section>
           A propriedade <span class="color">flex-direction</span> determina se o fluxo principal sera em linhas ou colunas
           <br />
           <span class="color">(row, column, row-reverse e column-reverse)</span>.
+          <div class="container example">
+            <div class="container center row">
+              <div class="item">1</div>
+              <div class="item">2</div>
+            </div>
+            <div class="container center row-reverse">
+              <div class="item">1</div>
+              <div class="item">2</div>
+            </div>
+          </div>
+          <div class="example container">
+            <div class="container column center">
+              <div class="item">1</div>
+              <div class="item">2</div>
+            </div>
+            <div class="container column-reverse center">
+              <div class="item">1</div>
+              <div class="item">2</div>
+            </div>
+          </div>
         </section>
 
         <section>
           A propriedade <span class="color">flex-wrap</span> determina se os elementos serão forçados a ficar em uma mesma linha ou se eles irão quebrar em várias linhas.
           <p><span class="color">(wrap, nowrap, wrap-reverse)</span></p>
+          <div class="container example">
+            <div class="container center nowrap">
+              <div class="item wrap-example">1</div>
+              <div class="item wrap-example">2</div>
+            </div>
+            <div class="container center wrap">
+              <div class="item wrap-example">1</div>
+              <div class="item wrap-example">2</div>
+            </div>
+          </div>
         </section>
 
         <section>
           A propriedade <span class="color">justify-content</span> determina o fluxo no main-axis, organizando os itens horizontalmente.
           <p><span class="color">(flex-start(default), flex-end, center, space-between, space-around)</span></p>
+          <div class="example container">
+            <div class="container justify-start">
+              <div class="item">1</div>
+            </div>
+            <div class="container justify-center">
+              <div class="item">1</div>
+            </div>
+            <div class="container justify-end">
+              <div class="item">1</div>
+            </div>
+          </div>
         </section>
 
         <section>
