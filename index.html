@@ -324,18 +324,57 @@ http://www.flexboxpatterns.com/home
 
         <section>
           <h2 class="color">Item properties</h2> A propriedade <span class="color">order</span> determina o lugar que os elementos aparecerão.
+          <div class="example container">
+            <div class="container">
+              <div class="item" style="order: 1">1(order: 1)</div>
+              <div class="item" style="order: 2">2(order: 2)</div>
+            </div>
+            <div class="container">
+              <div class="item" style="order: 2">1(order: 2)</div>
+              <div class="item" style="order: 1">2(order: 1)</div>
+            </div>
+          </div>
         </section>
 
         <section>
           A propriedade <span class="color">flex-grow</span> determina quão flex o item pode ser.
+          <div class="example">
+            <div class="container">
+              <div class="item" style="flex-grow: 1">flex-grow: 1</div>
+              <div class="item" style="flex-grow: 1">flex-grow: 1</div>
+            </div>
+            <div class="container">
+              <div class="item" style="flex-grow: 1">flex-grow: 1</div>
+              <div class="item" style="flex-grow: 2">flex-grow: 2</div>
+            </div>
+            <div class="container">
+              <div class="item" style="flex-grow: 1">flex-grow: 1</div>
+              <div class="item" style="flex-grow: 3">flex-grow: 3</div>
+            </div>
+
+          </div>
         </section>
 
         <section>
           A propriedade <span class="color">flex-basis</span> determina um tamanho mínimo mas flexível.
+          <div class="example">
+            <div class="container">
+              <div class="item" style="flex-basis: 100px">flex-basis: 100px</div>
+              <div class="item" style="flex-basis: 200px">flex-basis: 200px</div>
+              <div class="item" style="flex-basis: 300px">flex-basis: 300px</div>
+            </div>
+          </div>
         </section>
 
         <section>
           A propriedade <span class="color">align-self</span> alinha apenas o item selecionado, no cross-axis.
+          <div class="example">
+            <div class="container" style="height: 250px">
+              <div class="item" style="align-self: flex-start; flex-grow: 1">align-self: flex-start</div>
+              <div class="item" style="align-self: center; flex-grow: 1">align-self: center</div>
+              <div class="item" style="align-self: flex-end; flex-grow: 1">align-self: flex-end</div>
+            </div>
+          </div>
         </section>
 
 
