@@ -25,6 +25,7 @@
 
   <!--
 https://speakerdeck.com/diogomoretti/css-layout-from-table-to-flexbox
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 http://www.flexboxpatterns.com/home
 -->
 </head>
@@ -39,19 +40,20 @@ http://www.flexboxpatterns.com/home
         <p>@gustavoquinalha</p>
       </section>
 
-			<section style="text-align: left!important">
-				<h2>Gustavo Quinalha</h2>
-				<small><strong>Full Stack Developer at Monk</strong></small><br />
-				<ul>
-					<li>Github</li>
-					<li>Codepen</li>
-					<li>Linkedin</li>
-					<li>Face</li>
-				</ul>
-			</section>
+      <section style="text-align: left!important">
+        <h2>Gustavo Quinalha</h2>
+        <small><strong>Full Stack Developer at Monk</strong></small>
+        <br />
+        <ul>
+          <li>Github</li>
+          <li>Codepen</li>
+          <li>Linkedin</li>
+          <li>Face</li>
+        </ul>
+      </section>
 
       <section>
-				<h2 class="color">FLEXBOX</h2>
+        <h2 class="color">FLEXBOX</h2>
         <img src="https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif" alt="" width="70%">
 
       </section>
@@ -92,7 +94,8 @@ http://www.flexboxpatterns.com/home
         </section>
 
         <section>
-          <p>Basicamente, os itens serão definidos seguindo o <br><span class="bgg">main axis</span> (desde o <span class="color">main-start</span> até o <span class="color">main-end</span>) e/ou o <span class="bgg">cross axis</span> (do <span class="color">cross-start</span> ao <span class="color">cross-end</span>).</p>
+          <p>Basicamente, os itens serão definidos seguindo o
+            <br><span class="bgg">main axis</span> (desde o <span class="color">main-start</span> até o <span class="color">main-end</span>) e/ou o <span class="bgg">cross axis</span> (do <span class="color">cross-start</span> ao <span class="color">cross-end</span>).</p>
           <img src="./img/flex-axes.png" alt="" width="600">
         </section>
 
@@ -108,6 +111,11 @@ http://www.flexboxpatterns.com/home
           <p><strong class="color">Cross Size</strong> A largura ou a altura de um item flexível que está na dimensão cruzada(cross)</p>
         </section>
 
+        <section>
+          <h2 class="color">Resumindo</h2>
+          <p>O <strong class="color">Main Axis</strong> é manuseado pelo <strong class="color">justify-content</strong></p>
+          <p>e <strong class="color">Cross Axis</strong> é manuseado pelo <strong class="color">item-align</strong>.</p>
+        </section>
 
 
       </section>
@@ -117,7 +125,10 @@ http://www.flexboxpatterns.com/home
       <section>
         <section>
           <h2 class="color">Flexbox Properties</h2>
-          <small><p>O flexbox possui propriedades para o <span class="bgg">container</span> e para os <span class="bgg">itens</span></p></small>
+          <p>Como falado antes, o flexbox possui propriedades para o <span class="bgg">container</span> e para o <span class="bgg">item</span>:</p>
+        </section>
+
+        <section>
           <div class="example">
             <div class="pai">Pai(container)</div>
             <div class="container center">
@@ -126,11 +137,10 @@ http://www.flexboxpatterns.com/home
             </div>
           </div>
 
-          <pre><code class="hljs">&lt;div class="container"&gt;
-  &lt;div class="item"&gt;Item&lt;div&gt;
-  &lt;div class="item"&gt;Item&lt;div&gt;
-&lt;div&gt;</code></pre>
-
+<pre><code class="hljs">&lt;div class="container"&gt;
+  &lt;div&gt;Item&lt;/div&gt;
+  &lt;div&gt;Item&lt;/div&gt;
+&lt;/div&gt;</code></pre>
         </section>
 
         <section>
@@ -147,22 +157,8 @@ http://www.flexboxpatterns.com/home
         </section>
 
         <section>
-          <ul class="fixul">
-            <h5>Item</h5>
-            <li><span class="color">Order</span>: integer</li>
-            <li><span class="color">Flex-grow</span>: number</li>
-            <li><span class="color">Flex-shrink</span>: number</li>
-            <li><span class="color">Flex-basis</span>: length | auto</li>
-            <li><span class="color">Flex</span>: shorthand</li>
-            <li><span class="color">Align-self</span>: auto | flex-start | flex-end | center | baseline | stretch</li>
-          </ul>
-        </section>
-
-
-
-        <section>
           container
-          <pre><code class="hlcss">
+<pre><code class="hlcss">
 .container {
   display: flex;
   flex-direction: row; /* default */
@@ -177,88 +173,110 @@ http://www.flexboxpatterns.com/home
         </section>
 
         <section>
+          <ul class="fixul">
+            <h5>Item</h5>
+            <li><span class="color">Order</span>: integer</li>
+            <li><span class="color">Flex-grow</span>: number</li>
+            <li><span class="color">Flex-shrink</span>: number</li>
+            <li><span class="color">Flex-basis</span>: length | auto</li>
+            <li><span class="color">Flex</span>: shorthand</li>
+            <li><span class="color">Align-self</span>: auto | flex-start | flex-end | center | baseline | stretch</li>
+          </ul>
+        </section>
+
+
+
+
+
+        <section>
           item
-          <pre><code class="hlcss">
+<pre><code class="hlcss">
 .item {
   order: 1;
   flex-grow: 1;
   flex-basis: 200px;
-  flex: 1 200px; /* ou */
+  flex: 1 200px;
 }
 </code></pre>
 
         </section>
 
 
+        <section>
+          <h1 class="color">Então...</h1>
+          <span class="color">Container</span> é o elemento que envolve sua estrutura.</span>.
 
-      </section>
-
-
-      <section>
-        <h2 class="color">A ideia é simples</h2>
-        <p>Os filhos de um elemento com flexbox pode se posicionar em qualquer direção e pode ter dimensões flexíveis para se adaptar.</p>
-
-        <div class="example">
-          <div class="pai">Pai(container)</div>
-          <div class="container">
-            <div class="item">Filho(item)</div>
+          <div class="example">
+            <div class="container">
+              <div class="item">item</div>
+            </div>
           </div>
-        </div>
 
-      </section>
+        </section>
 
-
-      <section>
-        <span class="color">Flex container</span> é o elemento que envolve sua estrutura. Você define que um elemento é um Flex Container com a propriedade display com os valores flex ou inline-flex.
-
-        <div class="example">
-          <div class="container">
-            <div class="item">item</div>
+        <section>
+          E <span class="color">Items</span> são os elementos filho do <span class="color">container</span>.
+          <div class="example">
+            <div class="container">
+              <div class="item">item</div>
+              <div class="item">item</div>
+              <div class="item">item</div>
+              <div class="item">item</div>
+            </div>
           </div>
-        </div>
-
+        </section>
       </section>
 
       <section>
-        <span class="color">Flex Item</span> são os elementos filho do flex container.
-        <div class="example">
-          <div class="container">
-            <div class="item">item</div>
-            <div class="item">item</div>
-            <div class="item">item</div>
-            <div class="item">item</div>
-          </div>
-        </div>
+
+        <section>
+          <h2 class="color">Container properties</h2> A propriedade <span class="color">display</span> flex, ou inline-flex determina que o container é flex, sendo assim "ativando" as propriedas do flexbox.
+        </section>
+
+        <section>
+          A propriedade <span class="color">flex-direction</span> determina se o fluxo principal sera em linhas ou colunas
+          <br />
+          <span class="color">(row, column, row-reverse e column-reverse)</span>.
+        </section>
+
+        <section>
+          A propriedade <span class="color">flex-wrap</span> determina se os elementos serão forçados a ficar em uma mesma linha ou se eles irão quebrar em várias linhas.
+          <p><span class="color">(wrap, nowrap, wrap-reverse)</span></p>
+        </section>
+
+        <section>
+          A propriedade <span class="color">justify-content</span> determina o fluxo no main-axis, organizando os itens horizontalmente.
+          <p><span class="color">(flex-start(default), flex-end, center, space-between, space-around)</span></p>
+        </section>
+
+        <section>
+          A propriedade <span class="color">Align-items</span> determina o fluxo no cross-axis, organizando os itens verticalmente.
+          <p><span class="color">(flex-start, flex-end, center, baseline, stretch(default))</span></p>
+        </section>
+
       </section>
 
-      <!-- <section>
-					<span class="color">Eixos ou Axes</span> são as duas direções básicas que existem em um Flex Container: main axis, que seria o eixo horizontal ou o eixo principal e o cross axis que seria o eixo vertical.
-				</section> -->
 
       <section>
-        <span class="color">Directions</span> determina a origem e o término do fluxo dos ítens. Eles seguem o vetor estabelecido pelo modo traidicional de escrita: esquerda para direita, direita para esquerda etc.
 
-        <div class="example">
-          <div class="container column">
-            <div class="item">item</div>
-            <div class="item">item</div>
-          </div>
-        </div>
+        <section>
+          <h2 class="color">Item properties</h2> A propriedade <span class="color">order</span> determina o lugar que os elementos aparecerão.
+        </section>
+
+        <section>
+          A propriedade <span class="color">flex-grow</span> determina quão flex o item pode ser.
+        </section>
+
+        <section>
+          A propriedade <span class="color">flex-basis</span> determina um tamanho mínimo mas flexível.
+        </section>
+
+        <section>
+          A propriedade <span class="color">align-self</span> alinha apenas o item selecionado, no cross-axis.
+        </section>
+
 
       </section>
-
-      <section>
-        A propriedade <span class="color">order</span> determina o lugar que os elementos aparecerão.
-      </section>
-
-      <section>
-        A propriedade <span class="color">flex-flow</span> determina a ordem do fluxo em que os elementos aparecerão.
-      </section>
-
-      <section>
-        Você pode definir se os elementos serão forçados a ficar em uma mesma linha ou se eles irão quebrar em várias linhas com a propriedade <span class="color">flex-wrap</span>.
-      </section>
-
 
 
 
@@ -273,6 +291,8 @@ http://www.flexboxpatterns.com/home
     // - https://github.com/hakimel/reveal.js#configuration
     // - https://github.com/hakimel/reveal.js#dependencies
     Reveal.initialize({
+      history: true,
+
       dependencies: [{
         src: 'plugin/markdown/marked.js'
       }, {
