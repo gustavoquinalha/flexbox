@@ -23,7 +23,7 @@
     document.getElementsByTagName('head')[0].appendChild(link);
   </script>
 
-	<!--
+  <!--
 https://speakerdeck.com/diogomoretti/css-layout-from-table-to-flexbox
 http://www.flexboxpatterns.com/home
 -->
@@ -58,14 +58,57 @@ http://www.flexboxpatterns.com/home
 
 
       <section>
-        <p>O <span class="color">Flexbox</span>(Flexible Box Layout Model) faz parte da especificação do CSS3 que organiza elementos na página quando o layout precisa ser visualizado em diversos tamanhos.</p>
-        <img src="img/caniuse.png" alt="">
+        <section>
+          <p>O <span class="color">Flexbox</span> (Flexible Box ou caixa flexivel) é um modulo da W3C responsável por fornecer uma maior eficiência para alinhar elementos tanto horizontalmente quanto verticalmente e distribuir espaço dentro de um container.
+          </p>
+        </section>
+
+        <section>
+          <p>A principal idéia <span class="color">Flexbox</span> é dar ao container a capacidade de alterar a largura, altura e ordem de seus itens para preencher o espaço disponível.</p>
+        </section>
+
+        <section>
+          <img src="img/caniuse.png" alt="" width="90%">
+          <img src="img/gloria.jpg" alt="" width="400">
+        </section>
+
+        <section>
+          <blockquote cite="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">
+            Note: Flexbox layout is most appropriate to the components of an application, and small-scale layouts, while the Grid layout is intended for larger scale layouts.
+          </blockquote>
+          <p>Nota: O Flexbox layout é mais apropriado para os componentes de um aplicativo e layouts de pequena escala, enquanto o Grid layout é destinado a layouts de grande escala.</p>
+        </section>
+
+        <section>
+          Fonte: <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">css-tricks.com</a>
+        </section>
+
       </section>
 
       <section>
-        <h2 class="color">Flexbox - The box</h2>
-        <img src="./img/flex-axes.png" alt="" width="90%">
-        <p></p>
+        <section>
+          <h2 class="color">The box</h2>
+          <p>O Flexbox não é apenas uma propriedade, na realidade é um modulo que envolve um conjunto de propriedades. Algumas configuradas no <span class="bgg">CONTAINER</span> e outras no <span class="bgg">ITEM</span>.</p>
+        </section>
+
+        <section>
+          <p>Basicamente, os itens serão definidos seguindo o <br><span class="bgg">main axis</span> (desde o <span class="color">main-start</span> até o <span class="color">main-end</span>) e/ou o <span class="bgg">cross axis</span> (do <span class="color">cross-start</span> ao <span class="color">cross-end</span>).</p>
+          <img src="./img/flex-axes.png" alt="" width="600">
+        </section>
+
+        <section>
+          <p><strong class="color">Main Axis:</strong> O eixo principal do container.</p>
+          <p><strong class="color">Main-start | Main-end:</strong> Aonde o eixo principal do container começa(start) e aonde acaba(end).</p>
+          <p><strong class="color">Main Size</strong> A largura ou altura de um item flexível. É o tamanho principal do item.</p>
+        </section>
+
+        <section>
+          <p><strong class="color">Cross Axis</strong> Eixo perpendicular ao main axis chamado de eixo transversal. Sua direção depende da direção do eixo principal(flex-direction).</p>
+          <p><strong class="color">Cross-start | Cross-end:</strong> As linhas flexíveis são preenchidas com itens e colocadas no container, começando no cross-start do container e indo em direção ao cross-end.</p>
+          <p><strong class="color">Cross Size</strong> A largura ou a altura de um item flexível que está na dimensão cruzada(cross)</p>
+        </section>
+
+
 
       </section>
 
@@ -74,33 +117,84 @@ http://www.flexboxpatterns.com/home
       <section>
         <section>
           <h2 class="color">Flexbox Properties</h2>
-          <p>Você precisa entender que o Flexbox é uma nova maneira de posicionar elementos do seu layout e por isso precisamos de novos nomes para identificar os elementos da estrutura.</p>
+          <small><p>O flexbox possui propriedades para o <span class="bgg">container</span> e para os <span class="bgg">itens</span></p></small>
+          <div class="example">
+            <div class="pai">Pai(container)</div>
+            <div class="container center">
+              <div class="item">Filho(item)</div>
+              <div class="item">Filho(item)</div>
+            </div>
+          </div>
+
+          <pre><code class="hljs">&lt;div class="container"&gt;
+  &lt;div class="item"&gt;Item&lt;div&gt;
+  &lt;div class="item"&gt;Item&lt;div&gt;
+&lt;div&gt;</code></pre>
 
         </section>
+
         <section>
-          <div class="container justify-around">
-						<ul>
-	            <h5>Flex Container</h5>
-	            <li>Display</li>
-	            <li>flex-direction</li>
-	            <li>flex-wrap</li>
-	            <li>flex-flow</li>
-	            <li>justify-content</li>
-	            <li>align-items</li>
-	          </ul>
-	          <ul>
-	            <h5>Flex Item</h5>
-	            <li>order</li>
-	            <li>flex-grow</li>
-	            <li>flex-shrink</li>
-	            <li>align-self</li>
-	          </ul>
-          </div>
+          <ul class="fixul">
+            <h5>Container</h5>
+            <li><span class="color">Display</span>: flex | inline-flex</li>
+            <li><span class="color">Flex-direction</span>: row | row-reverse | column | column-reverse</li>
+            <li><span class="color">Flex-wrap</span>: nowrap | wrap | wrap-reverse</li>
+            <li><span class="color">Flex-flow</span>: shorthand</li>
+            <li><span class="color">Justify-content</span>: flex-start | flex-end | center | space-between | space-around</li>
+            <li><span class="color">Align-items</span>: flex-start | flex-end | center | baseline | stretch</li>
+            <li><span class="color">Align-content</span>: flex-start | flex-end | center | space-between | space-around | stretch</li>
+          </ul>
         </section>
+
+        <section>
+          <ul class="fixul">
+            <h5>Item</h5>
+            <li><span class="color">Order</span>: integer</li>
+            <li><span class="color">Flex-grow</span>: number</li>
+            <li><span class="color">Flex-shrink</span>: number</li>
+            <li><span class="color">Flex-basis</span>: length | auto</li>
+            <li><span class="color">Flex</span>: shorthand</li>
+            <li><span class="color">Align-self</span>: auto | flex-start | flex-end | center | baseline | stretch</li>
+          </ul>
+        </section>
+
+
+
+        <section>
+          container
+          <pre><code class="hlcss">
+.container {
+  display: flex;
+  flex-direction: row; /* default */
+  flex-wrap: nowrap; /* default */
+  flex-flow: row nowrap;/* default (shorthand) */
+  justify-content: flex-start; /* default */
+  align-items: stretch; /* default */
+  align-content: flex-start; /* default but no effect */
+}
+</code></pre>
+
+        </section>
+
+        <section>
+          item
+          <pre><code class="hlcss">
+.item {
+  order: 1;
+  flex-grow: 1;
+  flex-basis: 200px;
+  flex: 1 200px; /* ou */
+}
+</code></pre>
+
+        </section>
+
+
+
       </section>
 
 
-			<section>
+      <section>
         <h2 class="color">A ideia é simples</h2>
         <p>Os filhos de um elemento com flexbox pode se posicionar em qualquer direção e pode ter dimensões flexíveis para se adaptar.</p>
 

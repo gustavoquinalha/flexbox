@@ -58,8 +58,25 @@
   align-items: stretch;
 }
 
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.bgg{
+  background: #00d46a;
+  padding-left: 5px!important;
+  padding-right: 5px!important;
+  border-radius: 4px;
+  font-weight: 900!important;
+  line-height: 1.5em!important
+}
 
-
+.main {
+  background: #f12ec6
+}
+.cross {
+  background: #2e82f1
+}
 
 
 .column .item {
@@ -88,6 +105,22 @@
   background: #cdcdcd;
   padding: 20px!important;
   padding-bottom: 0!important;
-  text-align: left!important;
-  color: #00d46a
+  color: #00d46a;
+  transform: translateY(10px);
+}
+
+blockquote {
+  font-size: 35px!important
+}
+.color-white {
+  color: #fff!important
+}
+
+pre,
+code {
+  width: 100%!important;
+}
+
+.fixul li {
+  font-size: 0.9em
 }
