@@ -8,6 +8,12 @@
 - http://pt-br.learnlayout.com/flexbox.html
 -
 - https://speakerdeck.com/diogomoretti/css-layout-from-table-to-flexbox <- toppp
+
+- https://jakearchibald.com/2014/dont-use-flexbox-for-page-layout/
+- http://brolik.com/blog/when-to-use-flexbox/
+- https://codepen.io/enxaneta/full/adLPwv
+- https://facebook.github.io/yoga/
+
 - https://pt.slideshare.net/diegoeis/flexbox-to-the-people
 - https://speakerdeck.com/afonsopacifer/flexbox
 -

@@ -62,6 +62,65 @@
   justify-content: center;
   align-items: center;
 }
+
+
+
+.basis1 {
+  flex-basis: 100px!important;
+}
+.basis2 {
+  flex-basis: 200px!important;
+}
+.basis3 {
+  flex-basis: 300px!important;
+}
+.basis4 {
+  flex-basis: 400px!important;
+}
+.basis5 {
+  flex-basis: 500px!important;
+}
+.basis6 {
+  flex-basis: 600px!important;
+}
+.flex {
+  flex: 1;
+}
+.flex1 {
+  flex-grow: 1;
+}
+.flex2 {
+  flex-grow: 2;
+}
+.flex3 {
+  flex-grow: 3;
+}
+.flex4 {
+  flex-grow: 4;
+}
+.flex5 {
+  flex-grow: 5;
+}
+.hide {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .bgg{
   background: #00d46a;
   padding-left: 5px!important;
