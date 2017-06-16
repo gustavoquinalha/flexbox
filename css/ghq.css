@@ -379,3 +379,8 @@ color: #4B5056
   background: rgba(0, 0, 0, .7);
   position: absolute;
 }
+.rounded {
+  border-radius: 50%;
+  border: 10px solid #00d46a!important;
+  box-sizing: border-box;
+}
