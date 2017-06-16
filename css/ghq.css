@@ -285,3 +285,62 @@ code {
   color: #000;
   transform: scale(1.3, 1.3);
 }
+
+
+
+
+.post {
+background: #fff;
+height: 600px;
+text-align: left;
+font-size: 14px!important;
+padding: 10px!important;
+width: 500px
+}
+.post-header {
+margin-bottom: 10px!important
+}
+.post-header-name .name{
+  color: #365899
+}
+.post-header-name .time{
+color: #949494;
+font-size: 10px;
+}
+.post-img {
+background: green;
+background: url(./../img/devpr.png);
+background-position: center;
+background-size: cover;
+}
+.post-btn {
+height: 40px;
+color: #4B5056
+}
+.post-send-comment input {
+  border: none;
+  height: 40px;
+  width: 100%;
+  outline: none
+}
+.post-send-comment {
+  border: 1px solid #ccc!important;
+}
+.img-face {
+  width: 40px;
+  height: 40px;
+  background: url(https://cdn3.trampos.co/candidate_profiles/avatars/199263/c6c4a29d2de2618860b8f441ecbc55b91364bb34/medium/eu.jpg);
+  background-position: center;
+  background-size: cover;
+  margin-right: 5px!important
+}
+.post-btn div {
+  margin-right: 20px;
+}
+.iconsf .icon {
+  color: #4B5056
+}
+.sizepreface {
+  width: 50%;
+  margin-left: 10px!important
+}
